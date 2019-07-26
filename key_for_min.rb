@@ -30,13 +30,18 @@ def key_for_min_value(name_hash)
     end
   end
   
-  while q > 0
-    if "#{value_array[q - 1]}" == "#{smallest_value}"
-      key_array[q-1]
-    else 
-      q -= 1
-    end
-  end
+  key_array.map do |index, value|
+  
+  
+  
+  
+  #while q > 0
+    #if "#{value_array[q - 1]}" == "#{smallest_value}"
+      #key_array[q-1]
+    #else 
+      #q -= 1
+    #end
+  #end
 end
 end
 end
