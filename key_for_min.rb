@@ -10,26 +10,20 @@ def key_for_min_value(name_hash)
     value_array << value 
   end
   
-  value_array.combination(2).to_a.each do |section|
-    binding.pry
-    if section[0] <= value_array[0]
-      smallest_value == 0
-      smallest_value += section[0]
-    elsif section[1] <= value_array[0]
-      smallest_value == 0
-      smallest_value += section[1]
-    if section[0] < smallest_value
-      smallest_value == section[0]
-      elsif section[1] < smallest_value
-        smallest_value == section[1]
-      end
-    #else
-    end
+  value_array.each do |value|
+    if value < value_array[0]
+      smallest_value -= smallest_value
+      smallest_value += value
+    elsif value > value_array[0]
+    smallest_value -= smallest_value
+    smallest_value += value_array[0]
+  end
+end
 
   key_array.each do |key|
-    #binding.pry
     if name_hash[key] == smallest_value 
-      final_value == "#{key}"
+      final_value = key
+      binding.pry
     end
   end
   final_value
