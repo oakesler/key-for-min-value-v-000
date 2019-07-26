@@ -31,9 +31,9 @@ def key_for_min_value(name_hash)
 
   key_array.each  do |index, value|
     if "#{value}" == "#{smallest_value}"
-      final_value == key_array[index]
+      final_value += index
       end
     end
   end
-  final_value
+  key_array[final_value]
 end
