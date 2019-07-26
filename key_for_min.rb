@@ -31,6 +31,11 @@ def key_for_min_value(name_hash)
   end
   
   key_array.map do |index, value|
+    if "#{value}" == "#{smallest_value}"
+      return key_array[index]
+    end
+  end
+end
   
   
   
