@@ -20,9 +20,8 @@ def key_for_min_value(name_hash)
     end
 
   key_array.each do |key|
-    #binding.pry
     if name_hash[key] == smallest_value 
-      final_value += ":#{key}"
+      final_value == "#{key}"
     end
   end
   final_value
