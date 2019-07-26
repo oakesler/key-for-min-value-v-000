@@ -21,10 +21,8 @@ def key_for_min_value(name_hash)
 end
 
   key_array.each do |key|
-    if name_hash[key] == smallest_value 
-      final_value = key
-      binding.pry
+    if name_hash[key] == smallest_value
+      return key
     end
   end
-  final_value
 end
