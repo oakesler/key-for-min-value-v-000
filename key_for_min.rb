@@ -8,7 +8,7 @@ def key_for_min_value(name_hash)
     value_array << value 
     end
   
-  value_array.combination(2).to_a.map do |section|
+  value_array.combination(2).to_a.each do |section|
     if smallest_value == 0 
       if section[0] < section[1]
         section[0] == smallest_value
@@ -24,12 +24,13 @@ def key_for_min_value(name_hash)
         end
       end
     end
+    smallest_value
   end
 
-  key_array.map do |index, value|
-    if "#{value}" == "#{smallest_value}"
-      key_array[index]
-      end
-    end
+  #key_array.map do |index, value|
+    #if "#{value}" == "#{smallest_value}"
+      #key_array[index]
+      #end
+    #end
   end
 end
