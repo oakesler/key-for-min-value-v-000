@@ -21,8 +21,8 @@ def key_for_min_value(name_hash)
 end
 
   key_array.each do |key|
-    if name_hash[key] == smallest_value
-      return key
+    if name_hash[key] != smallest_value
+      key_array.remove
     end
   end
 end
