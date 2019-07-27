@@ -4,6 +4,7 @@ def key_for_min_value(name_hash)
   key_array = []
   final_value = ""
   smallest_value = 0
+  new_array = []
   
   name_hash.each do |key, value|
     key_array << key
@@ -21,8 +22,9 @@ def key_for_min_value(name_hash)
 end
 
   key_array.each do |key|
-    if name_hash[key] != smallest_value
-      key_array.remove
+    if name_hash[key] == smallest_value
+      new_array.push(key)
     end
   end
+  new_array[0]
 end
